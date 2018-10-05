@@ -15,25 +15,18 @@ $color_verylightgray: #F6F6F6;
 $color_backgroundgray: $color_verylightgray;
 $color_middleLightGray: #bfc4c8;
 
-/* Form Colors */
-$formColor_red: #ec1600;
-$formColor_blue: $color_cyan;
-$formColor_cyan: $color_cyan;
-$formColor_green: #69bb4e;
-$formColor_gray: $color_gray;
-$formColor_border: #d0d2d3;
-$formColor_inputText: #1e6fb6;
+/* CELLS */
 
-$formColor_placeholder: #757e87;
+$cell-height: 100px;
+$cell-width: 120px;
 
-/* Dialogs */
-$dialogZIndex: 8000;
-$forcedDialogZIndex: 10000;
+$map-field-height: $cell-height*0.75;
+$map-field-width: $cell-width;
 
-$dialogColor_title: $formColor_blue;
-$dialogColor_border: $formColor_border;
+$player-field-height: $cell-height - $map-field-height;
+$player-field-width: $cell-width;
 
-/* Other */
-$spinnerWhiteUrl: url('/assets/img/plugins/spinner_white.svg');
-$spinnerBlackUrl: url('/assets/img/plugins/spinner_black.svg');
+
+
+
 
