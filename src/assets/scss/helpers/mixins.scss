@@ -1,0 +1,312 @@
+@import "vars";
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin border-radius-important($radius) {
+  border-radius: $radius !important;
+  -o-border-radius: $radius !important;
+  -ms-border-radius: $radius !important;
+  -moz-border-radius: $radius !important;
+  -webkit-border-radius: $radius !important;
+}
+
+@mixin spinnerWhiteBg($bgOpacity:0.5, $size:120px) {
+  background: rgba(0, 0, 0, $bgOpacity) $spinnerWhiteUrl no-repeat center center;
+  background-size: $size auto;
+}
+
+@mixin spinnerBlackBg($bgOpacity:0.5, $size:120px) {
+  background: rgba(0, 0, 0, $bgOpacity) $spinnerBlackUrl no-repeat center center;
+  background-size: $size auto;
+}
+
+@mixin spinnerBlack($bgOpacity:0.5, $size:120px) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  position: absolute;
+  @include spinnerBlackBg($bgOpacity, $size);
+}
+
+@mixin spinnerWhite($bgOpacity:0.5, $size:120px) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  position: absolute;
+  @include spinnerWhiteBg($bgOpacity, $size);
+}
+
+@mixin opacity($value) {
+  opacity: $value;
+  -moz-opacity: $value;
+  -webkit-opacity: $value;
+  filter: alpha(opacity=$value * 100);
+}
+
+@mixin opacity-important($value) {
+  opacity: $value !important;
+  -moz-opacity: $value !important;
+  -webkit-opacity: $value !important;
+  filter: alpha(opacity=$value * 100) !important;
+}
+
+@mixin text-shadow($top:0, $left:0, $blur:0, $color:white, $inset:"") {
+  text-shadow: $top $left $blur $color #{$inset};
+  -moz-text-shadow: $top $left $blur $color #{$inset};
+  -webkit-text-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin box-shadow($top:0, $left:0, $blur:0, $color:white, $inset:"") {
+  box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin box-shadow-important($top:0, $left:0, $blur:0, $color:white, $inset:"") {
+  box-shadow: $top $left $blur $color #{$inset} !important;
+  -moz-box-shadow: $top $left $blur $color #{$inset} !important;
+  -webkit-box-shadow: $top $left $blur $color #{$inset} !important;
+}
+
+@mixin placeholder() {
+  ::-webkit-input-placeholder {
+    @content
+  }
+
+  :-moz-placeholder {
+    @content
+  }
+
+  ::-moz-placeholder {
+    @content
+  }
+
+  :-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin all-inputs {
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="password"],
+  textarea {
+    @content;
+  }
+}
+
+@mixin all-one-line-text-inputs {
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="password"] {
+    @content;
+  }
+}
+
+@mixin only-text-inputs {
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="password"] {
+    @content;
+  }
+}
+
+@mixin only-text-inputs-with-textarea {
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="password"] {
+    @content;
+  }
+}
+
+@mixin button {
+  button,
+  button:hover,
+  button:focus,
+  button:active,
+  button[disabled],
+  button[disabled]:hover {
+    @content;
+  }
+}
+
+@mixin button-disabled {
+  button[disabled],
+  button[disabled]:hover,
+  button[disabled]:active {
+    @content;
+  }
+}
+
+@mixin centered($width) {
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin centered-padding($padding) {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin centered-margin($margin) {
+  width: 100%;
+  margin: 0 $margin;
+}
+
+// must be deprecated, rewrite to size-centered-in-percent
+@mixin size-centered($width) {
+  width: $width;
+  margin-left: calc((100% - #{$width}) / 2);
+
+}
+
+@mixin size-centered-in-percent($width) {
+  width: $width;
+  margin-left: calc((100% - #{$width}) / 2);
+}
+
+@mixin size-centered-in-pixels($width) {
+  width: $width;
+  margin-left: calc((100% - #{$width}) / 2);
+}
+
+/* Core */
+@mixin transition($transition...) {
+  transition: $transition;
+  -o-transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+  -o-transform: $transform;
+  -moz-transform: $transform;
+  -webkit-transform: $transform;
+}
+
+@mixin animation($name, $animation...) {
+  -webkit-animation: $name $animation;
+  -moz-animation: $name $animation;
+  -o-animation: $name $animation;
+  animation: $name $animation;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-o-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin flip-horizontal() {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+@mixin flip-vertical() {
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+
+@mixin no-selected() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  outline: none;
+}
+
+@mixin rotate($deg) {
+  -ms-transform: rotate($deg#{deg}); /* IE 9 */
+  -webkit-transform: rotate($deg#{deg}); /* Chrome, Safari, Opera */
+  transform: rotate($deg#{deg});
+
+}
+
+@mixin button-css($color, $shadowDarkness) {
+  background: $color;
+  @include box-shadow(0, 3px, 0, darken($color, $shadowDarkness));
+}
+
+@mixin button-active-css($color, $shadowDarkness) {
+  background: darken($color, $shadowDarkness);
+  @include box-shadow(0, 3px, 0, darken($color, $shadowDarkness));
+}
+
+@mixin button-active-flat-css($color, $shadowDarkness) {
+  background: darken($color, $shadowDarkness);
+}
+
+@mixin button-disabled-css($color, $shadowDarkness) {
+  background: lighten($color, $shadowDarkness);
+  @include box-shadow(0, 3px, 0, darken(lighten($color, $shadowDarkness), $shadowDarkness));
+}
+
+@mixin no-bootstrap-row-margin() {
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@mixin no-bootstrap-col-padding() {
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+

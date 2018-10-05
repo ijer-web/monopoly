@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  mapSize = 7;
 
-  ngOnInit() {
+  constructor () {
+  }
+
+  ngOnInit () {
+  }
+
+  get getMapSizeHorizontal () {
+    return new Array(this.mapSize + 4);
+  }
+
+  get getMapSizeVertical () {
+    return new Array(this.mapSize - 4);
   }
 
 }

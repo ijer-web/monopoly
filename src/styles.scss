@@ -1,0 +1,11 @@
+.flex-container{
+  display: flex;
+}
+
+.flex-container-horizontal{
+  justify-content: space-between;
+}
+
+.flex-container-reverse{
+  flex-direction:row-reverse;
+}

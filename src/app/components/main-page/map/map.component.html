@@ -1,0 +1,20 @@
+<div class="app-map">
+  <div class="flex-container">
+    <app-cell *ngFor="let i of getMapSizeHorizontal; let index = index" [cellNumber]="index+1">6</app-cell>
+  </div>
+
+  <div>
+    <div class="flex-container flex-container-horizontal" *ngFor="let i of getMapSizeVertical; let index = index">
+      <app-cell [cellNumber]="getMapSizeHorizontal.length * 2 + getMapSizeVertical.length * 2 - index"></app-cell>
+      <app-cell [cellNumber]="index + getMapSizeHorizontal.length + 1"></app-cell>
+    </div>
+  </div>
+
+  <div class="flex-container flex-container-reverse">
+    <app-cell *ngFor="let i of getMapSizeHorizontal; let index = index"
+              [cellNumber]="index + getMapSizeHorizontal.length + getMapSizeVertical.length + 1">
+    </app-cell>
+  </div>
+</div>
+
+

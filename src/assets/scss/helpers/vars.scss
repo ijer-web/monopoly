@@ -1,0 +1,39 @@
+/** Project specifics vars **/
+$color_blue: #0071ce;
+$color_logo_blue: #00ccff;
+$color_cyan: #00ccff;
+$color_yellow: #ffde66;
+$color_orange: orange;
+$screen_orange: #fab739;
+$color_gray: #878a8e;
+$color_darkgray: #6d6e71;
+$color_verydarkgray: #545558;
+$color_lightblack: #323232;
+$color_middlegray: #a8adb1;
+$color_lightgray: #ebebeb;
+$color_verylightgray: #F6F6F6;
+$color_backgroundgray: $color_verylightgray;
+$color_middleLightGray: #bfc4c8;
+
+/* Form Colors */
+$formColor_red: #ec1600;
+$formColor_blue: $color_cyan;
+$formColor_cyan: $color_cyan;
+$formColor_green: #69bb4e;
+$formColor_gray: $color_gray;
+$formColor_border: #d0d2d3;
+$formColor_inputText: #1e6fb6;
+
+$formColor_placeholder: #757e87;
+
+/* Dialogs */
+$dialogZIndex: 8000;
+$forcedDialogZIndex: 10000;
+
+$dialogColor_title: $formColor_blue;
+$dialogColor_border: $formColor_border;
+
+/* Other */
+$spinnerWhiteUrl: url('/assets/img/plugins/spinner_white.svg');
+$spinnerBlackUrl: url('/assets/img/plugins/spinner_black.svg');
+

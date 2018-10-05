@@ -1,0 +1,51 @@
+/* Bootstrap 3 "Mobile-First" media queries */
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@mixin respond-xxs() {
+  @media only screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@mixin respond-xs() {
+  @media only screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+/* Small Devices, Tablets */
+@mixin respond-sm() {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+/* Medium Devices, Desktops */
+@mixin respond-md() {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@mixin respond-lg() {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@mixin respond-xlg() {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@mixin respond-xxlg() {
+  @media only screen and (min-width: 1700px) {
+    @content;
+  }
+}

@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MapComponent } from './components/map/map.component';
-import { CellComponent } from './components/map/cell/cell.component';
-import { FieldComponent } from './components/map/field/field.component';
-import { PlayerFieldComponent } from './components/map/player-field/player-field.component';
+import { MapComponent } from './components/main-page/map/map.component';
+import { CellComponent } from './components/main-page/map/cell/cell.component';
+import { FieldComponent } from './components/main-page/map/field/field.component';
+import { PlayerFieldComponent } from './components/main-page/map/player-field/player-field.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
